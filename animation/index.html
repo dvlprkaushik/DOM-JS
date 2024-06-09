@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background: rgb(101, 143, 114);
+      }
+      #inside {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        background: #a79f4c;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="inside"></div>
+    </div>
+    <button onclick="myMove()">Click me</button>
+    <script>
+      const myMove = () => {
+        let pos = 0;
+        const elem = document.getElementById("inside");
+        const id = setInterval(frame, 10);
+        function frame() {
+          if (pos == 350) {
+            clearInterval(id);
+          }
+          pos++;
+          elem.style.top = pos + "px";
+          elem.style.left = pos++ + "px";
+        }
+      };
+    </script>
+  </body>
+</html>
