@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      Top 5 names
+      <ul>
+        <li>John</li>
+        <li>Jake</li>
+        <li>Dane</li>
+        <li>Ramos</li>
+        <li>Thomas</li>
+      </ul>
+    </div>
+
+    <script>
+      const list = document.querySelector("ul");
+      const childToChange = list.children[1];
+      const newli = document.createElement("li");
+      newli.textContent = "Giga chad";
+      list.replaceChild(newli, childToChange);
+    </script>
+  </body>
+</html>

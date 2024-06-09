@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="hero" about="hello"></div>
+    <script>
+        // Get attribute 
+        let hero = document.querySelector('#hero');
+        console.log(hero.getAttribute('about'));
+        console.log(hero.getAttribute('id'));
+
+        // Set attribute
+        hero.setAttribute('example',123);
+        console.log(hero.outerHTML);
+
+        // looping in it
+        for(let attr of hero.attributes){
+            console.log(`${attr.name} = ${attr.value}`);
+        }
+    </script>
+</body>
+</html>
