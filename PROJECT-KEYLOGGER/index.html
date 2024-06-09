@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: black;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .con{
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            margin-top: 50px;
+            justify-content: space-around;
+        }
+        #log,#state{
+            width: 500px;
+            height: 50px;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            background-color: rgb(229, 132, 13);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="border: 2px solid black; padding: 2px 5px; border-radius: 5px;">Key Logger</h1>
+        <p>DOM manipulation Project</p>
+        <div class="btn-container">
+            <button id="start">Start Logging Keypresses</button>
+            <button id="stop">Stop Logging Keypresses</button>
+        </div>
+        <div class="con">
+            <div id="log"></div>
+            <div id="state"></div>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
